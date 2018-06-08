@@ -1,0 +1,17 @@
+import timeit
+import PUpy
+print('truncate:', timeit.timeit('PUpy.truncate(-3053434.45)', 'import PUpy', number=1000) * 1000, 'usec')
+print('applyMovement:', timeit.timeit('PUpy.applyMovement(PUpy.position(0,0,0), -100000, 345)', 'import PUpy', number=1000) * 1000, 'usec')
+print('applyJump:', timeit.timeit('PUpy.applyJump(PUpy.position(0,0,0), -1000000, 564)', 'import PUpy', number=1000) * 1000, 'usec')
+print('calcMovement:', timeit.timeit('PUpy.calcMovement(PUpy.pos2D(0,0), PUpy.pos2D(10,10), puX=2, puZ=2)', 'import PUpy', number=1000) * 1000, 'usec')
+print('calcJump:', timeit.timeit('PUpy.calcJump(PUpy.position(0,0,0), PUpy.pos2D(10,10), puX=2, puZ=2)', 'import PUpy', number=1000) * 1000, 'usec')
+print('inTriangle:', timeit.timeit('PUpy.inTriangle(PUpy.pos2D(0,0), PUpy.tri2D(53, 54, 234, 214, -345, 93))', 'import PUpy', number=1000) * 1000, 'usec')
+print('inRectangle:', timeit.timeit('PUpy.inRectangle(PUpy.pos2D(0,0), PUpy.rectangle(10,15,43,346))', 'import PUpy', number=1000) * 1000, 'usec')
+print('inPolygon:', timeit.timeit('PUpy.inPolygon(PUpy.pos2D(0,0), [PUpy.pos2D(1,0), PUpy.pos2D(2,0), PUpy.pos2D(3,2), PUpy.pos2D(2,3), PUpy.pos2D(0,2), PUpy.pos2D(0,1)])', 'import PUpy', number=1000) * 1000, 'usec')
+print('distance:', timeit.timeit('PUpy.distance(PUpy.pos2D(0,0), PUpy.pos2D(43,346))', 'import PUpy', number=1000) * 1000, 'usec')
+print('inCylinder:', timeit.timeit('PUpy.inCylinder(PUpy.pos2D(0,0), PUpy.cylinder(10,15,43,346,-34))', 'import PUpy', number=1000) * 1000, 'usec')
+print('distance3D:', timeit.timeit('PUpy.distance3D(PUpy.position(0,0,4), PUpy.position(10,15,43))', 'import PUpy', number=1000) * 1000, 'usec')
+print('apollonianInTriangle:', timeit.timeit('PUpy.apollonianInTriangle(PUpy.apollonian(43,435,24,456,0.9), PUpy.tri2D(34,435,6656,324,46,2))', 'import PUpy', number=1000) * 1000, 'usec')
+print('apollonianInRectangle:', timeit.timeit('PUpy.apollonianInRectangle(PUpy.apollonian(43,435,24,456,0.9), PUpy.rectangle(10,15,43,346))', 'import PUpy', number=1000) * 1000, 'usec')
+print('apollonianInPolygon:', timeit.timeit('PUpy.apollonianInPolygon(PUpy.apollonian(43,435,24,456,0.9), [PUpy.pos2D(1,0), PUpy.pos2D(2,0), PUpy.pos2D(3,2), PUpy.pos2D(2,3), PUpy.pos2D(0,2), PUpy.pos2D(0,1)])', 'import PUpy', number=1000) * 1000, 'usec')
+print('floorHeight:', timeit.timeit('PUpy.floorHeight(PUpy.pos2D(0,0), PUpy.triangle(43,346,456,234,234,877,3456,24,87))', 'import PUpy', number=1000) * 1000, 'usec')
