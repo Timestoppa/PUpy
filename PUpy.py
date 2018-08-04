@@ -52,7 +52,7 @@ class tri2D:
 class rectangle:
     def __init__(self, xMin, xMax, zMin, zMax):
         self.min = pos2D(xMin, zMin)
-        self.max = pos2D(xMax, xMax)
+        self.max = pos2D(xMax, zMax)
 
 class cylinder:
     def __init__(self, x, y, z, height, radius):
